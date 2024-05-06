@@ -31,3 +31,7 @@ App.Cluster.init()
 ```
 
 You can then access the host URL, for example `http://localhost::4000` and verify that there will always be a Goose and multiple Ducks even in case of network partition.
+
+Alternatives to solve the same problem are:
+
+Consul, Zookeeper, Etcd.

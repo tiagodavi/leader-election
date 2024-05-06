@@ -14,7 +14,7 @@ defmodule App.Application do
       AppWeb.Telemetry,
       {Phoenix.PubSub, name: App.PubSub},
       # Start to serve requests, typically the last entry
-      AppWeb.Endpoint
+      AppWeb.Endpoint,
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

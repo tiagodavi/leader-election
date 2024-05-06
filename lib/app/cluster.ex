@@ -12,4 +12,17 @@ defmodule App.Cluster do
 
     :ra.start_cluster(:default, "cluster", machine, Enum.map(nodes, &{__MODULE__, &1}))
   end
+
+  @spec leader? :: boolean()
+  def leader? do
+    App.Cluster
+    |> :ra.member_overview()
+    |> case do
+      {:ok, %{id: {_, id}, leader_id: {_, leader_id}}, _} ->
+        id == leader_id
+
+      _ ->
+        false
+    end
+  end
 end

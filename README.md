@@ -17,8 +17,17 @@ To start 4 NODES, run each line on a different terminal instance:
 
 ```bash
 PORT=4000 NODES=n0@127.0.0.1,n1@127.0.0.1,n2@127.0.0.1,n3@127.0.0.1 iex --name n0@127.0.0.1 -S mix phx.server
+```
+
+```bash
 PORT=4001 NODES=n0@127.0.0.1,n1@127.0.0.1,n2@127.0.0.1,n3@127.0.0.1 iex --name n1@127.0.0.1 -S mix phx.server
+```
+
+```bash
 PORT=4002 NODES=n0@127.0.0.1,n1@127.0.0.1,n2@127.0.0.1,n3@127.0.0.1 iex --name n2@127.0.0.1 -S mix phx.server
+```
+
+```bash
 PORT=4003 NODES=n0@127.0.0.1,n1@127.0.0.1,n2@127.0.0.1,n3@127.0.0.1 iex --name n3@127.0.0.1 -S mix phx.server
 ```
 

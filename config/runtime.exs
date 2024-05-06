@@ -7,22 +7,24 @@ import Config
 # any compile-time configuration in here, as it won't be applied.
 # The block below contains prod specific runtime configuration.
 
-nodes = System.fetch_env!("NODES")
+if config_env() in [:dev, :prod] do
+  nodes = System.fetch_env!("NODES")
 
-hosts =
-  nodes
-  |> String.split(",")
-  |> Enum.map(&String.to_atom/1)
+  hosts =
+    nodes
+    |> String.split(",")
+    |> Enum.map(&String.to_atom/1)
 
-config :libcluster,
-  topologies: [
-    epmd: [
-      # The selected clustering strategy. Required.
-      strategy: Cluster.Strategy.Epmd,
-      # Configuration for the provided strategy. Optional.
-      config: [hosts: hosts]
+  config :libcluster,
+    topologies: [
+      epmd: [
+        # The selected clustering strategy. Required.
+        strategy: Cluster.Strategy.Epmd,
+        # Configuration for the provided strategy. Optional.
+        config: [hosts: hosts]
+      ]
     ]
-  ]
+end
 
 # ## Using releases
 #

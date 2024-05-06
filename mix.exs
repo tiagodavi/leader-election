@@ -38,6 +38,7 @@ defmodule App.MixProject do
       {:jason, "~> 1.2"},
       {:bandit, "~> 1.2"},
       {:libcluster, "~> 3.3"},
+      {:ex_unit_clustered_case, "~> 0.4"},
       {:ra, "~> 2.10.0"}
     ]
   end

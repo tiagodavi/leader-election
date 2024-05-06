@@ -1,0 +1,7 @@
+#{id => {'Elixir.App.Cluster','n1@127.0.0.1'},
+  machine => {module,'Elixir.App.StateMachine',#{}},
+  cluster_name => <<"cluster">>,uid => <<"CLUSTE86KY3C5NTL1Z">>,
+  initial_members => [{'Elixir.App.Cluster','n1@127.0.0.1'}],
+  log_init_args => #{uid => <<"CLUSTE86KY3C5NTL1Z">>},
+  broadcast_time => 100,tick_timeout => 1000,
+  install_snap_rpc_timeout => 120000,await_condition_timeout => 30000}.

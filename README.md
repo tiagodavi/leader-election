@@ -2,7 +2,13 @@
 
 This is a very simple distributed phoenix app with leader election.
 
-`mix local.rebar --force`
+- `mix local.rebar --force`
+
+- `mix deps.get`
+
+There are some tests available: 
+
+- `mix test`
 
 Internally it relies on libcluster and raft: 
 

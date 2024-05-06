@@ -6,8 +6,8 @@ This is a very simple distributed phoenix app with leader election.
 
 Internally it relies on libcluster and raft: 
 
-https://github.com/bitwalker/libcluster
-https://github.com/rabbitmq/ra
+- https://github.com/bitwalker/libcluster
+- https://github.com/rabbitmq/ra
 
 You can increase the number of `NODES` as you wish as long as each NODE is part of the `NODES` variable list as example below.
 
